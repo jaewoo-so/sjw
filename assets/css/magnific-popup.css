@@ -50,6 +50,13 @@
   text-align: left;
   z-index: 1045; }
 
+  .mfp-wrap.my-custom-class .mfp-content {
+    height: 900px;
+    max-height: 90vh;
+    width: 1600px;
+    max-width: 90vw;
+}
+
 .mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {
   width: 100%;
   cursor: auto; }

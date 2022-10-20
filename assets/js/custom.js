@@ -105,6 +105,13 @@ $('.simple-ajax-popup').magnificPopup({
 	gallery:{enabled:true}
 });
 
+$('.simple-ajax-popup1').magnificPopup({
+	src: 'https://jaewoo-so.github.io/sjwcv/',
+	type: 'iframe',
+	mainClass: 'my-custom-class',
+	gallery:{enabled:true}
+});
+
 });
 
 /* ---------------------------------------------- /*
