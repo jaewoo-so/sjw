@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getdbdp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: getdb
+  
+  template:
+    metadata:
+      labels:
+        app: getdb
+    spec: 
+      containers:
+      - name: getdb
+        image: "desg2022/01getdb:v02"
+        env:
+          - name: "PORT"
+            value: "8001"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: getdb-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: getdb 
+  ports:
+  - protocol: TCP
+    port: 8080 
+    targetPort: 8001
